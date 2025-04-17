@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function FunctionComponent({ title }) {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Component has updated")
+  }, [])
 
   return (
     <>
