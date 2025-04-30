@@ -20,7 +20,7 @@ export const addArticle = (article) => {
 };
 
 // Thunk Action Creators - return function
-export const fetchArticles = () => async dispatch => {
+export const fetchArticles = () => async (dispatch) => {
   // 1. Fetch request to grab data from backend
   const response = await fetch('/api/articles');
   const articles = await response.json();
@@ -30,14 +30,14 @@ export const fetchArticles = () => async dispatch => {
 };
 
 export const writeArticle = (payload) => async (dispatch) => {
-  //1. POST request to our backend
+  // 1. POST request to our backend
   const response = await fetch("/api/articles", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
-  });
+  })
 
-  //2. Update Redux store with new article
+  // 2. Update the Redux with new article
   if (response.ok) {
     const article = await response.json();
     dispatch(addArticle(article));

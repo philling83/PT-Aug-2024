@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { writeArticle } from '../../store/articleReducer';
 import './ArticleInput.css';
