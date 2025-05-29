@@ -17,7 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       validate: {
-        len: [1, 7]
+        len: {
+          args: [1, 7],
+          msg: "Out of range"
+        }
       }
     },
     type: DataTypes.STRING,
