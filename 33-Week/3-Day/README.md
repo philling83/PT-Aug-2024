@@ -55,10 +55,9 @@ print(number.index(1))
 ```
 
 ## Identity Operators
-- Handles strict equality
-  - `is` (strictly equal to)
-  - `is not` (not strictly equal to)
-- `is`/`is not` operators are usually preferred
+- `==` handles strict value equality checks
+- `is` handles strict object in memory equality checks
+- `is not` (not strictly equal to)
 ```python
 print (2 == '2')    # => False
 print (2 is '2')    # => False
@@ -68,6 +67,9 @@ print ("2" is '2')    # => True
 
 print (2 == 2.0)    # => True
 print (2 is 2.0)    # => False
+
+print([1, 2, 3] == [1, 2, 3])   # => True
+print([1, 2, 3] is [1, 2, 3])   # => False
 ```
 
 ## Operators Practices
