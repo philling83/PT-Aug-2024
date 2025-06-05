@@ -151,7 +151,7 @@ for i in range(5):
 ```python
 if name == 'Alieze':
     print('Hi, Alieze.')
-if (name == 'Alan'):
+if (name == 'Alieze'):
     print('Hi, Alieze.')
 ```
 ## Else Statements
