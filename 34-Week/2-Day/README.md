@@ -3,8 +3,6 @@
 ## Dictionaries
 
 -   Collection of comma separated key:value pairs
--   Insertion ordered since python 3.7
-    -   Prior to that, were unordered
 -   Mutable
 -   Dictionaries can't use dot notation like JS Objects
 
