@@ -8,25 +8,6 @@ transformation using the @wrapper syntax.
 The decorator syntax is merely syntactic sugar, the following two function
 definitions are semantically equivalent
 
-```js
-function sandwichMaker() {
-  let order = "One sandwich with tomato";
-
-  return function (food) {
-    order = order + " and " + food;
-    return order;
-  };
-}
-
-let sandwich = sandwichMaker(); // => returns a function
-console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
-console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
-console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
-
-let sandwich2 = sandwichMaker(); // => returns a function
-console.log(sandwich2("pb")) // => "One sandwich with tomato and pb"
-```
-
 ```py
 def staticmethod(f):
     def inner():
@@ -46,6 +27,27 @@ def f():
     pass
 
 f()
+```
+
+```js
+// JS Closure
+
+function sandwichMaker() {
+  let order = "One sandwich with tomato";
+
+  return function (food) {
+    order = order + " and " + food;
+    return order;
+  };
+}
+
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
+
+let sandwich2 = sandwichMaker(); // => returns a function
+console.log(sandwich2("pb")) // => "One sandwich with tomato and pb"
 ```
 
 ```py
